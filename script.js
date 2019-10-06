@@ -46,19 +46,12 @@ gifButton.addEventListener("click", function() {
   });
 });
 
-// $(document).ready(function() {
-//   $("#image-button").on("click", function(e) {
-//     $.ajax({
-//       url:
-//         "https://api.giphy.com/v1/gifs/random?api_key=K93XvEF6TLGx2ohemi8JkMJshHM2nZHp&tag=&rating=G",
-//       method: "GET",
-//       success: function(result) {
-//         console.log(result.data.url);
-//         console.log(result);
-//       },
-//       error: function(error) {
-//         console.log(`Error: ${error}`);
-//       }
-//     });
+// fetch("https://api.chucknorris.io/jokes/random")
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(function(data) {
+//     console.log(data.value);
+//     jokeArea.innerHTML = "";
+//     jokeArea.innerHTML = data.value;
 //   });
-// });
