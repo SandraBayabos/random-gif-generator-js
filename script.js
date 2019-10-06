@@ -1,14 +1,23 @@
 //AJAX CALL TO CHUCK NORRIS JOKE RANDOMIZER
 
-$.ajax({
-  url: "https://api.chucknorris.io/jokes/random",
-  method: "GET",
-  success: function(result) {
-    console.log(result.value);
-  },
-  error: function(error) {
-    console.log(`Error: ${error}`);
-  }
+const jokeButton = document.getElementById("joke-button");
+
+let jokeArea = document.getElementById("joke-container");
+
+jokeButton.addEventListener("click", function() {
+  $.ajax({
+    url: "https://api.chucknorris.io/jokes/random",
+    method: "GET",
+    success: function(result) {
+      console.log(result);
+      console.log(result.value);
+      jokeArea.innerHTML = "";
+      jokeArea.innerHTML = result.value;
+    },
+    error: function(error) {
+      console.log(`Error: ${error}`);
+    }
+  });
 });
 
 //AJAX CALL TO GIPHY
