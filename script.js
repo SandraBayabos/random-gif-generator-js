@@ -51,7 +51,22 @@ gifButton.addEventListener("click", function() {
 //     return response.json();
 //   })
 //   .then(function(data) {
+//     console.log(data);
 //     console.log(data.value);
 //     jokeArea.innerHTML = "";
 //     jokeArea.innerHTML = data.value;
+//   });
+
+//fetch(
+//   "https://api.giphy.com/v1/gifs/random?api_key=K93XvEF6TLGx2ohemi8JkMJshHM2nZHp&tag=&rating=G"
+// )
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(function(result) {
+//     console.log(result.data.image_url);
+//     let image = document.createElement("img");
+//     image.setAttribute("src", `${result.data.image_url}`);
+//     gifArea.innerHTML = "";
+//     gifArea.append(image);
 //   });
